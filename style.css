@@ -1,0 +1,135 @@
+html {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+h1, h2,h3 {
+	margin: 0;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 80%; 
+}
+
+ul {
+	list-style: none; 
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	visibility: hidden;
+	font-size: 0;
+	height: 0;
+	clear: both;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+/*start commented backslash hack \*/
+* html .clearfix {
+	height: 1%;
+}
+
+.clearfix {
+	display: block;
+}
+/* close commented backslash hack*/
+
+span {
+	display: inline-block;
+	margin-left: -30px;
+}
+
+.block {
+	border: 2px solid black;
+	margin-bottom: 20px;
+}
+
+.standard {
+	background-color: #4285f4;
+}
+
+.changed {
+	background-color: #f2f2f0;
+}
+
+.to-left {
+	float: left;
+}
+
+.to-right {
+	float: right;
+}
+
+.nm-top .changed {
+	margin-top: -30px;
+}
+
+.nm-bottom .standard {
+	margin-bottom: -30px;
+}
+
+.nm-left .changed {
+	margin-left: -30px;
+}
+ 
+.sample {
+	border: 2px solid black;
+}
+
+.to-left .sample div {
+	padding: 40px;
+}
+
+.to-left .standard {
+}
+
+.floated .to-left {
+	opacity: 0.8;
+}
+
+.block-2 .changed {
+	margin-left: -30px;
+}
+
+.block-3 .changed {
+	margin-right: -30px;
+}
+
+.two-columns-equalh .to-left {
+	width: 250px;
+}
+
+.two-columns-equalh .clearfix {
+	overflow: hidden;
+}
+
+.two-columns-equalh .wrapper .standard {
+	padding-bottom: 9999px;
+	margin-bottom: -9999px;
+}
+
+
+.signleul-columnslist li {
+	line-height:1.3em;
+}
+
+.signleul-columnslist .col2 {
+	margin-left:100px;
+}
+
+.signleul-columnslist .col3 {
+	margin-left:200px;
+	}/*twice margin-left*/
+
+.signleul-columnslist .top {
+	margin-top:-2.6em;
+	}/*twice line-height*/
+
+.eff-tech .example {
+	margin-bottom: 30px;
+}

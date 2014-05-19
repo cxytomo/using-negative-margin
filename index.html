@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Using negative margin</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+	<h1>NEGATIVE MARGINS ON STATIC ELEMENTS</h1>
+	<div class="block">
+		<div>
+			<div class="standard">
+				<h2>standard</h2>
+				<div>
+					A static element is an element with no float applied. The image below illustrates how static elements react to negative margins.
+				</div>
+			</div>
+			<div class="changed">
+				<h2>standard</h2>
+				A static element is an element with no float applied. The image below illustrates how static elements react to negative margins.
+			</div>
+		</div>
+		<div class="nm-top">
+			<div class="standard">
+				<h2>standard</h2>
+				<div>A static element is an element with no float applied. The image below illustrates how static elements react to negative margins.
+				</div>
+			</div>
+			<div class="changed">
+				<h2>negative margin top(-30px)</h2>
+				<div>A static element is an element with no float applied. The image below illustrates how static elements react to negative margins.
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="block">
+		<div>
+			<div class="standard">
+				<h2>standard</h2>
+				<div>A static element is an element with no float applied. The image below illustrates how static elements react to negative margins.</div>
+			</div>
+			<div class="changed">
+				<h2>standard</h2>
+				A static element is an element with no float applied. The image below illustrates how static elements react to negative margins.
+			</div>
+		</div>
+		<div class="nm-bottom">
+			<div class="standard">
+				<h2>negative margin bottom(-30px)</h2>
+				<div>A static element is an element with no float applied. The image below illustrates how static elements react to negative margins.</div>
+			</div>
+			<div class="changed">
+				<h2>standard</h2>
+				A static element is an element with no float applied. The image below illustrates how static elements react to negative margins.
+			</div>
+		</div>
+	</div>
+	<div class="block">
+		<div class="nm-left">
+			<div class="standard">
+				<h2>standard</h2>
+				<div>
+					A static element is an element with no float applied. The image below illustrates how static elements react to negative margins.
+				</div>
+			</div>
+			<div class="changed">
+				<h2>negative margin left(-30px)</h2>
+				<div>
+					A static element is an element with no float applied. The image below illustrates how static elements react to negative margins.
+				</div>
+			</div>
+		</div>
+	</div>
+	<ul class="notice">
+		<h2>Notice</h2>
+		<li>When a static element is given a negative margin on the top/left, it pulls the element in that specified direction</li>
+		<li>When a static element is given a negative margin on the bottom/right,it doesn’t move the element down/right as you might think. Instead, it pulls any succeeding element into the main element, overlapping it.</li>
+		<li>negative margin on right is not presented. Because if an element has another element at its right size, it is usually floated.
+	</ul>
+	<h1>NEGATIVE MARGINS ON FLOATED ELEMENTS</h1>
+	<div class="floated">
+		<div class="block-1">
+			<h3>STANDARD</h3>
+			<div class="clearfix">
+				<div class="to-left">
+					<div class="sample">
+						<div class="standard">1</div>
+					</div>
+				</div>
+				<div class="to-left">
+					<div class="sample">
+						<div class="changed">2</div>
+					</div>
+				</div>
+				<div class="to-left">
+					<div class="sample">
+						<div class="standard">3</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<div class="block-2">
+			<h3>block 2(margin-left: -30px;) </h3>
+			<div class="clearfix">
+				<div class="to-left">
+					<div class="sample">
+						<div class="standard">1</div>
+					</div>
+				</div>
+				<div class="to-left changed">
+					<div class="sample">
+						<div class="changed">2</div>
+					</div>
+				</div>
+				<div class="to-left">
+					<div class="sample">
+						<div class="standard">3</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="block-3">
+			<h3>block 2(margin-right: -30px;) </h3>
+			<div class="clearfix">
+				<div class="to-left">
+					<div class="sample">
+						<div class="standard">1</div>
+					</div>
+				</div>
+				<div class="to-left changed">
+					<div class="sample">
+						<div class="changed">2</div>
+					</div>
+				</div>
+				<div class="to-left">
+					<div class="sample">
+						<div class="standard">3</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="eff-tech">
+		<h1>Effective Techniques</h1>
+		<div>
+			<div class="two-columns-equalh example">
+				<h2> Two columns equal height</h2>
+				<div class="container">
+					<h3>Standard</h3>
+					<div class="clearfix">
+						<div class="to-left standard">
+							We all use margins in our CSS, but when it comes to negative margins, our relationship somehow manages to take a turn for the worse.
+						</div>
+						<div class="to-left changed">
+							We all use margins in our CSS, but when it comes to negative margins, our relationship somehow manages to take a turn for the worse. The use of negative margins in web design is so divided that while some of us absolutely love it, there are also those who simply think it’s the work of the devil.
+						</div>
+					</div>
+					<h3>block1(padding-bottom:9999px;margin-bottom: -9999px;)</h3>
+					<div class="clearfix wrapper">
+						<div class="to-left standard">
+							We all use margins in our CSS, but when it comes to negative margins, our relationship somehow manages to take a turn for the worse.
+						</div>
+						<div class="to-left changed">
+							We all use margins in our CSS, but when it comes to negative margins, our relationship somehow manages to take a turn for the worse. The use of negative margins in web design is so divided that while some of us absolutely love it, there are also those who simply think it’s the work of the devil.
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="signleul-columnslist example">
+				<h2>Making a sing UL into a 3-column list</h2>
+				<div>
+					<h3>Before(no margin)</h3>
+					<ul>
+						<li>Eggs</li>
+						<li>Ham<li>
+						<li>Bread<li>
+						<li>Butter<li>
+						<li>Flour<li>
+						<li>Cream</li>
+					</ul>
+				</div>
+				<div>
+					<h3>After(negative margin)</h3>
+					<ul>
+						<li class="col1">Eggs</li>
+						<li class="col1">Ham<li>
+						<li class="col2 top">Bread<li>
+						<li class="col2">Butter<li>
+						<li class="col3 top">Flour<li>
+						<li class="col3">Cream</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
